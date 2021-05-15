@@ -9,11 +9,12 @@ gitfiti
 noun : Carefully crafted graffiti in a GitHub commit history calendar
 """
 
-from datetime import datetime, timedelta
 import itertools
 import json
 import math
 import os
+from datetime import datetime, timedelta
+
 try:
     # Python 3+
     from urllib.error import HTTPError, URLError
@@ -92,6 +93,26 @@ OCTOCAT = [
   [0,4,0,0,4,4,4,0,0],
   [0,0,4,4,4,4,4,4,4],
   [0,0,4,0,4,0,4,0,4],
+]
+
+PACMAN_RIGHT_LOOK = [
+    [0, 0, 3, 3, 3, 3, 0, 0],
+     [0, 3, 3, 3, 3, 3, 3, 0],
+     [0, 1, 1, 3, 3, 1, 1, 0],
+     [3, 1, 4, 3, 3, 1, 4, 3],
+     [3, 3, 3, 3, 3, 3, 3, 3],
+     [3, 3, 3, 3, 3, 3, 3, 3],
+     [3, 0, 3, 0, 0, 3, 0, 3]
+]
+
+PACMAN_LEFT_LOOK = [
+    [0, 0, 3, 3, 3, 3, 0, 0],
+     [0, 3, 3, 3, 3, 3, 3, 0],
+     [0, 1, 1, 3, 3, 1, 1, 0],
+     [3, 4, 1, 3, 3, 4, 1, 3],
+     [3, 3, 3, 3, 3, 3, 3, 3],
+     [3, 3, 3, 3, 3, 3, 3, 3],
+     [3, 0, 3, 0, 0, 3, 0, 3]
 ]
 
 OCTOCAT2 = [
@@ -229,6 +250,8 @@ IMAGES = {
   'oneup2': ONEUP2,
   'hackerschool': HACKERSCHOOL,
   'octocat': OCTOCAT,
+  'pacman_left_look': PACMAN_LEFT_LOOK,
+  'pacman_right_look': PACMAN_RIGHT_LOOK,
   'octocat2': OCTOCAT2,
   'hello': HELLO,
   'heart1': HEART1,
